@@ -9,5 +9,7 @@ dp = Dispatcher(
     bot=bot
 )
 
+### you can cut logging btw
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
