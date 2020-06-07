@@ -1,0 +1,21 @@
+from database import config
+import os
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = config.get("dialogflow", "key")
+DIALOGFLOW_ID = config.get("dialogflow", "id")
+DF_PROJECT_ID = config.get("dialogflow", "project_id")
+DF_HELP_UUID = config.get("dialogflow", "help_intent_uuid")
+DF_PASS_UUID = config.get("dialogflow", "pass_intent_uuid")
+SKIP_UPDATES = config.get("main", "skip-updates")
+CHAT_ID = config.get("main", "chat_id")
+TOKEN = config.get("main", "token")
+B_TEXT = config.get("message", "button-text")
+M_TEXT = config.get("message", "message-text")
+IU_UPDATE = config.get("main", "interim_update")
+QUESTION_TEXT = config.get("message", "question-body")
+DETAIL_TEXT = config.get("message", "detailed-text")
+PASTE_TEXT = config.get("message", "paste-text")
+NOMETA_TEXT = config.get("message", "nometa-body")
+NEPRIVET_TEXT = config.get("message", "neprivet-text")
+IMPORT_DATA_FAIL = config.get("message", "import-data-fail")
+ADMINS = config.get("main", "admins").split(",")
