@@ -10,7 +10,6 @@ commands = ('!go', '!paste', '!np', '!nm', '!dnm')  # Bot`s commands. If you add
 
 @dp.message_handler(content_types=['text'])
 async def text_com(message: types.Message):
-    msg_id = message.reply_to_message.message_id
     username = message.from_user.username
     request = apiai.ApiAI(f'{DIALOGFLOW_ID}').text_request()
     request.lang = 'ru'
