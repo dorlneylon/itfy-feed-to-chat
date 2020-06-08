@@ -32,7 +32,7 @@ async def text_com(message: types.Message):
                                                         url=f"https://nometa.xyz"))
         await message.reply(
             text=response, 
-            reply=message.reply_to_message.message_id, 
+            reply=username, 
             reply_markup=tailkey,
             )
     if message.reply_to_message is not None and message.reply_to_message.from_user.is_bot is not True:  # Check if replied message is replied to a human
