@@ -48,13 +48,11 @@ class Worker(threading.Thread):
                         reply_markup=key
                     )
                 else:
-                    self.types.Message.reply(
-                        text=f"<a href='{i['link']}'>{M_TEXT}</a>",
-                        disable_web_page_preview=False,
-                        parse_mode='html',
-                        reply_markup=key,
-                        reply=False
-                        )
+                    self.bot.send_message(chat_id=CHAT_ID,
+                                          text=f"<a href='{i['link']}'>{M_TEXT}</a>",
+                                          disable_web_page_preview=False,
+                                          parse_mode='html',
+                                          reply_markup=key)
             time.sleep(int(IU_UPDATE))
 
 def main():
